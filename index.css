@@ -1,0 +1,188 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --green: #628e75;
+  --white: #f9f9f9;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+body {
+  background: linear-gradient(130.02deg, #628e75 0.66%, #1a4855 83.32%);
+  background-repeat: no-repeat;
+  height: 100vh;
+  overflow-y: hidden;
+
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Header */
+
+.header-container {
+  margin: 41px 165px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-menu ul {
+  display: flex;
+  gap: 37px;
+}
+
+/* Main */
+
+main {
+  display: grid;
+  grid-template-columns: 1fr 960px 960px 1fr;
+}
+
+.text-principal-container {
+  grid-column: 2;
+  margin: 165px;
+}
+
+.text-principal h3 {
+  color: var(--white);
+
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: 3%;
+}
+
+.text-principal h1 {
+  color: var(--white);
+
+  font-size: 68px;
+  font-weight: 900;
+}
+
+.text-principal p {
+  color: var(--white);
+
+  font-size: 16px;
+  font-weight: 400;
+
+  padding-top: 25px;
+
+  width: 445px;
+}
+
+.btn-container {
+  margin-top: 46px;
+  display: flex;
+  gap: 72px;
+  align-items: center;
+}
+
+.btn-play {
+  background: #658e76;
+
+  width: 225px;
+  height: 45px;
+
+  text-align: center;
+  padding-top: 10px;
+
+  border-radius: 5px;
+
+  display: flex;
+
+  padding-left: 37px;
+  gap: 15px;
+}
+
+.btn-play a {
+  color: var(--white);
+
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.btn-play img {
+  padding-top: 3px;
+}
+
+.btn-trailer {
+  width: 230px;
+  height: 45px;
+
+  border: 2px solid #658e76;
+  border-radius: 5px;
+
+  padding: 8px 39px;
+}
+
+.btn-trailer a {
+  color: var(--white);
+
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.img-principal {
+  grid-template-columns: 3;
+
+  justify-content: center;
+  margin-top: 100px;
+}
+
+/* Responsivo */
+
+@media (max-width: 414px) {
+  body {
+    overflow-y: hidden;
+  }
+  main {
+    grid-template-columns: 1fr 720px 1fr;
+  }
+  .text-principal-container {
+    grid-column: 2;
+    margin: 25px;
+  }
+  .text-principal h3 {
+    font-size: 16px;
+  }
+  .text-principal h1 {
+    font-size: 56px;
+  }
+  .text-principal p {
+    font-size: 14px;
+    width: 362px;
+  }
+  .btn-trailer {
+    display: none;
+  }
+  .img-principal {
+    grid-column: 2;
+    grid-row: 1;
+
+    margin: 0;
+  }
+
+  .img-principal img {
+    width: 300px;
+    height: 221px;
+
+    padding-left: 82px;
+  }
+  .header-container {
+    margin: 14px 25px;
+  }
+
+  .header-menu li a img {
+    width: 16px;
+    height: 16px;
+  }
+}
